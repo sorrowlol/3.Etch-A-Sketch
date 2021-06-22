@@ -1,0 +1,19 @@
+html, body{
+    background-color: black;
+}
+
+#container{
+    display: grid;
+    grid-template-rows: repeat(8, 70px);
+    grid-template-columns: repeat(8, 70px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 85px;
+}
+
+#grid-divs{
+    background-color: white;
+}
+
+
+

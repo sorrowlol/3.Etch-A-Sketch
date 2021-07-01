@@ -14,43 +14,42 @@ function makeGrid(rows, columns){
         let c = document.createElement('div');
         c.classList.add('box');
         c.setAttribute('id', i);
-        c.style.height = 650/columns+"px"
-        c.style.width = 650/rows+"px";
+        c.style.height = 550/columns+"px"
+        c.style.width = 550/rows+"px";
         container.appendChild(c);
     }
-}
 
-makeGrid(rows, columns);
+    let boxes = document.querySelectorAll('.box');
 
-let boxes = document.querySelectorAll('.box');
-
-//draw
-boxes.forEach((div) => {
+    //draw
+    boxes.forEach((div) => {
     div.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = 'green';
+        e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`;
+        });
     });
-});
+    
+    //reset drawing
+    let reset = document.querySelector('#reset');
 
-//reset drawing
-let reset = document.querySelector('#reset');
-
-reset.addEventListener('click', () => {
-    let ask = confirm("This will earse your drawing. Are you sure?")
-
-    if (ask){
+    reset.addEventListener('click', () => {
+    
     boxes.forEach((div) =>{
-        div.style.backgroundColor = 'white';
-    })
+    div.style.backgroundColor = 'white';
+        });
+    });    
 }
-})
 
 //new grid
 let newGrid = document.querySelector('#new-grid');
+
 newGrid.addEventListener('click', () =>{
-    let ask = prompt('How many squares do you want?');
-    rows = Math.round(Math.sqrt(ask));
-    columns = Math.round(Math.sqrt(ask));
+    let ask = prompt('How many squares per side do you want?');
+    columns = ask;
+    rows = ask;
     container.innerHTML = '';
     makeGrid(rows, columns);
-})
+});
+
+makeGrid(rows, columns);
+
 

@@ -24,7 +24,7 @@ function makeGrid(rows, columns){
     //draw
     boxes.forEach((div) => {
     div.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`;
+        e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*512)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, 1)`;
         });
     });
     

@@ -22,8 +22,8 @@ function makeGrid(rows, columns){
     let boxes = document.querySelectorAll('.box');
 
     //draw
-    boxes.forEach((div) => {
-    div.addEventListener('mouseover', (e) => {
+    boxes.forEach((x) => {
+    x.addEventListener('mouseover', (e) => {
         e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*512)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, 1)`;
         });
     });
@@ -33,8 +33,8 @@ function makeGrid(rows, columns){
 
     reset.addEventListener('click', () => {
     
-    boxes.forEach((div) =>{
-    div.style.backgroundColor = 'white';
+    boxes.forEach((e) =>{
+    e.style.backgroundColor = 'white';
         });
     });    
 }

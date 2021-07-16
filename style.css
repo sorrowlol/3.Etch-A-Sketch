@@ -4,14 +4,19 @@
 }
 
 
-html, body{
-    background-color: black;
+html{
+    background: url('https://images5.alphacoders.com/829/thumb-1920-829733.png');
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
+
 
 #headline {
     color: white;
     text-align: center;
+    height: 96px;
+    text-transform: capitalize;
 }
 
 #headline > h1{
@@ -71,6 +76,7 @@ html, body{
     background-color: white;
     border-color: black;
     border-style: solid;
+    border-width: 0.5px;
     box-sizing: border-box;
 }
 

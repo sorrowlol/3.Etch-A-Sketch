@@ -34,7 +34,7 @@ function makeGrid(rows, columns){
     reset.addEventListener('click', () => {
     
     boxes.forEach((e) =>{
-    e.style.backgroundColor = 'white';
+    e.style.backgroundColor = 'transparent';
         });
     });    
 }
